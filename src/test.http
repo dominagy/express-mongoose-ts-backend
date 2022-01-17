@@ -1,0 +1,11 @@
+POST http://localhost:5000/auth/login
+Content-Type: application/json
+
+{
+  "email": "student001@jedlik.eu",
+  "password": "student001"
+}
+
+###
+
+GET http://localhost:5000/users
