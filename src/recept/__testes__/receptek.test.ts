@@ -9,6 +9,7 @@ validateEnv();
 
 let server: Express.Application;
 let cookie: string | any;
+let id: string;
 
 beforeAll(async () => {
     server = new App([new AuthenticationController(), new ReceptController()]).getServer();
@@ -30,6 +31,19 @@ describe("test API endpoints", () => {
                 leírás: "A túrósbuktát csuszával megesszük",
                 hozzávalók: ["túrósbukta", "csusza"],
             });
+        id = res.body._id;
+        expect(res.statusCode).toEqual(200);
+        console.log(res.body);
+    });
+    it("PATCH /receptek", async () => {
+        const res = await request(server).patch(`/receptek/${id}`).set("Cookie", cookie).send({
+            receptNév: "Túrósbukta csuszával",
+        });
+        expect(res.statusCode).toEqual(200);
+        console.log(res.body);
+    });
+    it("DELETE /receptek", async () => {
+        const res = await request(server).delete(`/receptek/${id}`).set("Cookie", cookie);
         expect(res.statusCode).toEqual(200);
         console.log(res.body);
     });
