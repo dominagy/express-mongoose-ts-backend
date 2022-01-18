@@ -1,0 +1,577 @@
+{
+	"info": {
+		"_postman_id": "56e028e6-3200-4fd8-807d-f19a298ea857",
+		"name": "Backend",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Auth",
+			"item": [
+				{
+					"name": "login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"student001@jedlik.eu\",\r\n    \"password\": \"student001\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://expressbackend123456789.herokuapp.com/auth/login",
+							"protocol": "https",
+							"host": [
+								"expressbackend123456789",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"auth",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "register",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"valami@v.com\",\r\n    \"name\": \"teso\",\r\n    \"password\": \"aasd\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://expressbackend123456789.herokuapp.com/auth/register",
+							"protocol": "https",
+							"host": [
+								"expressbackend123456789",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"auth",
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "logout",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "https://expressbackend123456789.herokuapp.com/auth/logout",
+							"protocol": "https",
+							"host": [
+								"expressbackend123456789",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"auth",
+								"logout"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "User",
+			"item": [
+				{
+					"name": "users/posts/id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://expressbackend123456789.herokuapp.com/users/posts/61b5f09cf39e4edcf5b8a3d4",
+							"protocol": "https",
+							"host": [
+								"expressbackend123456789",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"users",
+								"posts",
+								"61b5f09cf39e4edcf5b8a3d4"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "users",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://expressbackend123456789.herokuapp.com/users/posts",
+							"protocol": "https",
+							"host": [
+								"expressbackend123456789",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"users",
+								"posts"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "users/id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://expressbackend123456789.herokuapp.com/users/61b5ea14f39e4edcf5b8a3bd",
+							"protocol": "https",
+							"host": [
+								"expressbackend123456789",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"users",
+								"61b5ea14f39e4edcf5b8a3bd"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "all users",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://expressbackend123456789.herokuapp.com/users",
+							"protocol": "https",
+							"host": [
+								"expressbackend123456789",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"users"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "user",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"password\": \"asd123\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://expressbackend123456789.herokuapp.com/users/61b5f09cf39e4edcf5b8a3d4",
+							"protocol": "https",
+							"host": [
+								"expressbackend123456789",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"users",
+								"61b5f09cf39e4edcf5b8a3d4"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "del user",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "https://expressbackend123456789.herokuapp.com/users/61b5ea14f39e4edcf5b8a3bd",
+							"protocol": "https",
+							"host": [
+								"expressbackend123456789",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"users",
+								"61b5ea14f39e4edcf5b8a3bd"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Post",
+			"item": [
+				{
+					"name": "posts",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://expressbackend123456789.herokuapp.com/posts",
+							"protocol": "https",
+							"host": [
+								"expressbackend123456789",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"posts"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "posts/id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://expressbackend123456789.herokuapp.com/posts/61b5f336f39e4edcf5b8a3fb",
+							"protocol": "https",
+							"host": [
+								"expressbackend123456789",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"posts",
+								"61b5f336f39e4edcf5b8a3fb"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "posts/0/5/title/1/keyword",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://expressbackend123456789.herokuapp.com/posts/0/5/title/1",
+							"protocol": "https",
+							"host": [
+								"expressbackend123456789",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"posts",
+								"0",
+								"5",
+								"title",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "receptek/61e001773bd46c63f1704e70 Copy",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"title\": \"The Gentlemen\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://expressbackend123456789.herokuapp.com/posts/61b5f336f39e4edcf5b8a3fb",
+							"protocol": "https",
+							"host": [
+								"expressbackend123456789",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"posts",
+								"61b5f336f39e4edcf5b8a3fb"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "posts",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"content\": \"Ron és Reggie Kray (Tom Hardy) mindig is elválaszthatatlanok voltak. A sármos és népszerű Reggie, aki az East-End hercegeként a fényűző londoni éjszakában filmsztárokkal, és bűnözőkkel múlatja az idejét, gyerekkora óta vigyáz a kiszámíthatatlan és erőszakos Ronra. Hűségesen óvja fivérét a bajtól. Miután elintézi, hogy az elmegyógyintézetből kiengedjék őrültnek nyilvánított testvérét, már semmi nem áll az útjukba: együtt söprik le a színről nagy riválisaikat, a Richardsonokat, és egy csapásra átv\",\r\n            \"title\": \"Legend\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://expressbackend123456789.herokuapp.com/posts",
+							"protocol": "https",
+							"host": [
+								"expressbackend123456789",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"posts"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "receptek/61e001773bd46c63f1704e70 Copy 2",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "https://expressbackend123456789.herokuapp.com/receptek/61b5e9c0f39e4edcf5b8a3b9",
+							"protocol": "https",
+							"host": [
+								"expressbackend123456789",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"receptek",
+								"61b5e9c0f39e4edcf5b8a3b9"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Receptek",
+			"item": [
+				{
+					"name": "receptek",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "https://expressbackend123456789.herokuapp.com/receptek",
+							"protocol": "https",
+							"host": [
+								"expressbackend123456789",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"receptek"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "receptek/id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://expressbackend123456789.herokuapp.com/receptek/61dffe6d3bd46c63f1704e5a",
+							"protocol": "https",
+							"host": [
+								"expressbackend123456789",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"receptek",
+								"61dffe6d3bd46c63f1704e5a"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "receptek/0/5/title/1/keyword",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://expressbackend123456789.herokuapp.com/receptek/0/5/title/1",
+							"protocol": "https",
+							"host": [
+								"expressbackend123456789",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"receptek",
+								"0",
+								"5",
+								"title",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "receptek/61e001773bd46c63f1704e70",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"receptNév\": \"Szalagos farsangi fánk\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://expressbackend123456789.herokuapp.com/receptek/61dffe6d3bd46c63f1704e5a",
+							"protocol": "https",
+							"host": [
+								"expressbackend123456789",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"receptek",
+								"61dffe6d3bd46c63f1704e5a"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "receptek",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"receptNév\": \"MEGGYES PITE\",\r\n    \"url\": \"https://www.mindmegette.hu/images/31/L/lead_L_31028_meggyes-pite_n.jpg\",\r\n    \"leírás\": \"A meggyes pite elkészítéséhez a vajat a cukorral és a tojások sárgájával habosra keverjük. Hozzáadjuk a sütőporral elkevert lisztet, majd óvatosan, apránként a tojásfehérjéből keményre vert habot. Kivajazott tepsibe öntjük, és a tetejére szórjuk a magozott, lecsöpögtetett meggyet. 170 fokra előmelegített sütőben kb. 40-45 perc alatt készre sütjük.\",\r\n    \"hozzávalók\": [\"20dkg vaj\",\"15dkg cukor\",\"5db tojás\",\"0.5csom sütőpor\",\"15dkg liszt\",\"50dkg meggy\"]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://expressbackend123456789.herokuapp.com/receptek",
+							"protocol": "https",
+							"host": [
+								"expressbackend123456789",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"receptek"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "receptek/61e001773bd46c63f1704e70",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "https://expressbackend123456789.herokuapp.com/receptek/61dea6c70279fbc7cc2f82bf",
+							"protocol": "https",
+							"host": [
+								"expressbackend123456789",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"receptek",
+								"61dea6c70279fbc7cc2f82bf"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"auth": {
+		"type": "apikey",
+		"apikey": [
+			{
+				"key": "value",
+				"value": "Authorization=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MWI1ZTljMGYzOWU0ZWRjZjViOGEzYjkiLCJpYXQiOjE2NDI1MDI2NjAsImV4cCI6MTY0MjU4OTA2MH0.QSm645xGy-WSrZZ-Fw4U6t6zF2iiCZ-hEimArPOd63I; SameSite=None",
+				"type": "string"
+			},
+			{
+				"key": "key",
+				"value": "Cookie",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	]
+}
